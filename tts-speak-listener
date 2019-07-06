@@ -9,6 +9,8 @@ else
     echo "$FILE not found, creating it now:"
     echo "mkfifo $FILE"
     mkfifo ~/.tts
+fi
 
 echo "Press Control-C to stop listening"
 while true; do cat ~/.tts; done | termux-tts-speak
+
